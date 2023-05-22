@@ -33,9 +33,10 @@ function displayTemp(response) {
   let wind = document.querySelector("#wind");
   let dateEl = document.querySelector("#date");
   let icon = document.querySelector("#icon");
+
   celsiusTemperature = response.data.main.temp;
 
-  temperatureEl.innerHTML = Math.round(response.data.main.temp);
+  temperatureEl.innerHTML = Math.round(celsiusTemperature);
   cityEl.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = response.data.main.humidity;
@@ -65,7 +66,6 @@ function displayFahrenheitTemperature(event) {
   temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
 let celsiusTemperature = null;
-search("New York");
 
 function handleSubmit(event) {
   event.preventDefault();
@@ -81,3 +81,5 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("New York");
