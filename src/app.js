@@ -5,7 +5,8 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=$
 function displayTemp(response) {
   console.log(response.data.main.temp);
   let temperatureEl = document.querySelector("#temperature");
-  temperatureEl.innerHTML = Math.round(response.data.main.temp);
+  let cityEl = document.querySelector("#city");
+  temperatureEl.innerHTML = Math.round(response.data.name);
 }
 
 axios.get(apiUrl).then(displayTemp);
