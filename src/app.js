@@ -6,7 +6,7 @@ function displayTemp(response) {
   console.log(response.data.main.temp);
   let temperatureEl = document.querySelector("#temperature");
   let cityEl = document.querySelector("#city");
-  temperatureEl.innerHTML = Math.round(response.data.name);
+  cityEl.innerHTML = Math.round(response.data.name);
 }
 
 axios.get(apiUrl).then(displayTemp);
