@@ -1,7 +1,6 @@
 let apiKey = "3b7t38c5bd8502c1f10a4o47b15a6c8a";
 
-let apiUrl =
-  "https://api.shecodes.io/weather/v1/current?query=New York&key=3b7t38c5bd8502c1f10a4o47b15a6c8a&units=metric";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=New York&key=3b7t38c5bd8502c1f10a4o47b15a6c8a&units=metric`;
 
 function displayTemp(response) {
   console.log(response.data.main.temp);
