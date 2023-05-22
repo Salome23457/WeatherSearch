@@ -52,12 +52,12 @@ function search(city) {
   axios.get(apiUrl).then(displayTemp);
 }
 
+search("New York");
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
 }
-
-search("New York");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
