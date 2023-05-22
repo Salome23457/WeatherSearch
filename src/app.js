@@ -57,6 +57,7 @@ search("New York");
 function handleSubmit(event) {
   event.preventDefault();
   let cityInput = document.querySelector("#city-input");
+  search(cityInput.value);
 }
 
 let form = document.querySelector("#search-form");
